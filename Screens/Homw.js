@@ -21,7 +21,8 @@ export default class HomeScreen extends React.Component{
     style={{
       height:497,
       width:320,
-           
+      flex:1,
+      resizeMode:"cover"
     }}
     source={require('../assets/space.gif')}
     >
