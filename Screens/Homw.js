@@ -20,7 +20,8 @@ export default class HomeScreen extends React.Component{
     <ImageBackground
     style={{
       height:497,
-      width:320
+      width:320,
+           
     }}
     source={require('../assets/space.gif')}
     >
