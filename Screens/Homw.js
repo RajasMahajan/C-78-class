@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity,ImageBackground,SafeAreaView,Platform,StatusBar} from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity,ImageBackground,SafeAreaView,Platform,StatusBar,Image} from 'react-native';
 import Constants from 'expo-constants';
 import SpaceCraftScreen from './spacecraft';
 import StartMapScreen from './startmap';
@@ -20,12 +20,19 @@ export default class HomeScreen extends React.Component{
     <ImageBackground
     style={{
       height:497,
-      width:320,
-      flex:1,
-      resizeMode:"cover"
+      width:320
     }}
     source={require('../assets/space.gif')}
     >
+      <Image
+      style={{
+        width:180,
+        height:180,
+        alignSelf:'center',
+      
+      }}
+      source={require('../assets/main-icon.png')}
+      />
       <View
       style={{
         flex:0.5
@@ -33,7 +40,7 @@ export default class HomeScreen extends React.Component{
       >
     <Text
     style={{
-      marginTop :10,
+      marginTop :5,
       color:"white",
       fontWeight:"bold",
       fontSize:24,
@@ -45,7 +52,6 @@ export default class HomeScreen extends React.Component{
       marginTop :45,
       borderRadius:20,
       alignSelf:'center',
-  
     }}
     onPress={
       ()=>{
@@ -59,12 +65,23 @@ export default class HomeScreen extends React.Component{
       fontSize:24,
       color:"black",
     }}
-    >Space Crafts</Text></TouchableOpacity>
+    >Space Crafts</Text>
+    <Image
+    style={{
+      width:50,
+      height:80,
+      alignSelf:'left',
+      right:-140,
+      marginTop:-60
+    }}
+    source={require('../assets/space_crafts.png')}
+    />
+    </TouchableOpacity>
 
     
     <TouchableOpacity
     style={{
-      marginTop :50,
+      marginTop :30,
       borderRadius:20,
   alignSelf:'center',    
   
@@ -81,7 +98,18 @@ export default class HomeScreen extends React.Component{
       fontSize:24,
       color:"black",
     }}
-    >Start map </Text></TouchableOpacity>
+    >Start map</Text>
+    <Image
+      style={{ 
+        width:50,
+        height:80,
+        alignSelf:'left',
+        right:-110,
+        marginTop:-60
+      }}
+    source={require('../assets/star_map.png')}
+    />
+    </TouchableOpacity>
     <TouchableOpacity
     style={{
       marginTop :45,
@@ -99,9 +127,21 @@ export default class HomeScreen extends React.Component{
       backgroundColor:"yellow",
       fontWeight:"bold",
       fontSize:24,
+      marginRight:100,
       color:"black",
     }}
-    >DailypicScreen</Text></TouchableOpacity>
+    >DailypicScreen</Text>
+    
+    <Image
+      style={{ 
+        width:100,
+        height:70,
+        alignSelf:'left',
+        right:-160,
+        marginTop:-60
+      }}
+    source={require('../assets/daily_pictures.png')}
+    /></TouchableOpacity>
     </View>
     </ImageBackground>
     
